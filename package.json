@@ -1,0 +1,30 @@
+{
+  "name": "integracao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reprograma/on7-porto-s12-banco-de-dados.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reprograma/on7-porto-s12-banco-de-dados/issues"
+  },
+  "homepage": "https://github.com/reprograma/on7-porto-s12-banco-de-dados#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.11",
+    "nodemon": "^2.0.6"
+  },
+  "engines": {
+    "node": "v12.18.3"
+}
