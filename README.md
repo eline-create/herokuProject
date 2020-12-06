@@ -79,13 +79,13 @@ $ heroku git:remote -a nome-da-app-que-você-deu-no-heroku
 
 12. Insira a chave _privada_ em uma variável de ambiente chamada SECRET (precisa ter o mesmo nome que usamos na aplicação) no Heroku:
 ```
-heroku config:set SECRET=MIICXAIBAAKBgQCuGjLaF47T9XsN9blQD+GWg0YMX3Pgaic9yYUbe6o691eDafZ49WVbDq9wBPBQ2h+ug4TTX2yCyLhihgZlCfUep+JtMw+nqH+mORVts+DTd0BuztmMgfwqlrq72kNsUp+AIM3vBUfLVcBlMUj4I0+Baep83pdW3+6EKkOR7X9eIwIDAQABAoGAKlkbB2t1hV8PmHytn6jNQXQa5MWPBQYtF11eMCorZP5m3gM3PYLLLZPr3n6FCdWUoTlCZLuwRDuYhfZ9tbPvWCfd/bUOpQKI98oMTZCKI4SIkWYoJWOaagbKv9TDLB98RTexHEmiyAfKcbVQVRHOCscfGVYZ36Fcoa/9AwRrfykCQQDVhOpbHcSagbh/nRHYkQ1CAPL1mxJy7cAVS2tamJoRglrYFaXRxpVV2rW7RBNv+FtnyDrB9mRdGtf03YrcLnq9AkEA0L2uN/1Js8midGXhgQgNiEG3k8d4HqMM0BSV/qncDlQKcyCCtpxvyZwDhNM3TpVFsMeg9FEStLwUtkdSgcU6XwJAeRBW7PjQ66YXnUvKvZdpA/6Tw4x8hmulmK1dnk2eNcVKivCjR3EoZTiQCDEOMFOKSCrwnd99gojg37bpr/QupQJBAJnvZ60ugs2tIrqH73bCQ4h6PjEi5nhhca95nuvAw+FlJJemH/8e+mlJPmcThDPVbSFi9lV1/D+AfB24FyZQFi0CQE5YnwV48cGkMGCB4IAwUopgSvUBumczBlcQ45VxHcus474Ak10h6TkvySERboerPEh6T71EwjHP9IvhWlpeO54=
+heroku config:set SECRET=Chave privada
 ```
 
 13. A última configuração necessária agora é configurar a variável de ambiente que contém a URI do nosso banco de dados. Criamos anteriormente um cluster no Mongo Atlas, que nos deu uma string de conexão. É ela que vamos usar para setar a variável de ambiente. Quando subirmos a aplicação local, a aplicação usará o valor dessa variável que está no arquivo `.env`. Quando estiver no Heroku, usará a variável configurada lá:
 
 ```
-heroku config:set MONGODB_URL=mongodb+srv://ElineSPP:Muhpan811702HQ@cluster0.fi7vb.mongodb.net/tarefas?retryWrites=true&w=majority
+heroku config:set MONGODB_URL=mongodb+srv://Usuário:<password>@cluster0.fi7vb.mongodb.net/<database>?retryWrites=true&w=majority
 ```
 
 14. Por fim, tudo o que precisamos agora é adicionar e subir os arquivos do nosso projeto para o Heroku:
